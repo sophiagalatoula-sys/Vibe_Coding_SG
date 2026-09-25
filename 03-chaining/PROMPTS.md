@@ -6,7 +6,7 @@
 
 _Each prompt is a reusable step. Chain them: the output of one becomes the input to the next._
 
-## Prompt chain: Search results screen
+## Prompt chain:  checkout/payment-method step and the booking detail screen
 
 ### Step 1: Expand, add the checkout/payment-method step and the booking detail screen so the payment-hold promise and the 2-hour acceptance window are both visible, anchored to TaskRabbit.
 ```
