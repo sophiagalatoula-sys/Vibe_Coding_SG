@@ -56,4 +56,19 @@ _____
 
 _What you threw at it, and what held / broke._
 
+**Held (verified):**
+- 50 concurrent booking attempts on a single slot → exactly **1** succeeded; every other request got the friendly SLOT_TAKEN error and the slot never double-booked.
+- Tampered/direct writes: attempts to insert or update bookings and booking items directly, or inject wrong prices/quantities, were all rejected (revoked grants + trigger validation). Custom-quote-only bookings saved correctly at €0.
+- Cancellation rules: double cancel, cancel-after-acceptance, and cancel-after-expiry all refused with clear error codes; expired bookings release their slots.
+- Cross-user access: another account opening someone else's booking link (valid or malformed) sees "We couldn't find this booking" — no data leak.
+- Long/unsafe input: a 300-character search was truncated to 100 and rendered as plain text (no injection).
+
+**Broke, then fixed:**
+- The invites table initially allowed anonymous reads, exposing full email addresses — fixed in migration `0007_protect_invite_emails`: SELECT revoked from anon/authenticated and the dashboard switched to `invite_dashboard()` with masked addresses. Counts unchanged.
+
+**Not yet exercised (honest gaps):**
+- 200-parallel-read soak test and a 10,000-row `experiment_events` insert test were planned but not run.
+- The no-price-list browser path (every provider currently has prices).
+- Automated regression tests don't exist yet — the stress tests above were run once, by hand.
+
 _____
