@@ -15,7 +15,8 @@ _Analytics snapshot:_ visitors 5; page views 42; views per visit 8.4; average se
 
 | Change | Hypothesis | Result |
 |---|---|---|
-| _____ | _____ | _____ |
+| Separate the research/experiment content (baseline stats, categorized quotes) from the buyer-facing trust content (verification badges, endorsements, pricing, guarantees) on the provider profile. | Based on a first-time-user walkthrough finding that the provider profile currently reads as two documents stitched together — buyer decision content interleaved with research framing in one continuous scroll — separating them should let a visitor move cleanly from trust signals to a booking decision, without detouring through the research narration. | Not yet deployed. Implementation prompt below is queued for the next build pass; this row will be updated with the before → after read once it runs. |
+
 
 ## Peer feedback
 
