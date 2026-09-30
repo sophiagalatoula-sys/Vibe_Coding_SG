@@ -28,7 +28,7 @@ Not real peer/classmate feedback — flagged plainly rather than dressed up. Thi
 - "I saw a demo login posted right on the sign-in page — I could see how someone reviewing this would use it, though it does mean anyone visiting could look at the experiment data too."
 - "I went straight to the booking page this time and it opened clean — nothing already in my order. I had to actually pick something before 'Review and pay' would even light up." → points to: the booking-page pre-filled-cart finding is resolved — confirmed both by the page text ("No items selected yet," all quantities at 0) and by checking the button directly: it's disabled until an item is added.
 - "I clicked 'View profile' on Yannis and on Maria S., from the homepage and from Alex's own 'Other assemblers' section — both actually took me somewhere this time, a 'coming soon' page with their name on it, instead of doing nothing." → points to: the dead "View profile" links finding is resolved — confirmed on the Home page, the Browse page (filtered to Furniture Assembly), and Alex's "Other assemblers in Athens" section; all four other providers (Yannis T., Maria S., Petros L., Kostas D.) now link to `/providers/coming-soon/<name>`.
-- **Recurring theme:** the structural fix (separating research from buyer content, gating the Experiment Brief) reads as genuinely resolved; the one friction point that survived unchanged from round 1 is the endorsement-language inconsistency — the same single finding two independent passes have now flagged.
+- **Recurring theme:** the structural fix (separating research from buyer content, gating the Experiment Brief) reads as genuinely resolved
 
 _____
 
